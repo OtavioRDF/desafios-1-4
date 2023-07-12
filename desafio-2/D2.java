@@ -13,8 +13,8 @@ public class D2{
     System.out.println("NOTAS:");
     for (int nota: notas){
       var numNotas = entrada.divideToIntegralValue(new BigDecimal(nota)).intValue();
-      System.out.println(
-         numNotas + "    nota(s)    de    R$    " + nota
+      System.out.printf(
+         numNotas + "    nota(s)    de    R$    %.2f%n", (double)nota
       );
       entrada = entrada.remainder(new BigDecimal(nota));
     }
